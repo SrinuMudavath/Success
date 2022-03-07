@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container bg-cyan py-5">
+<form action="" class="needs-validation" novalidate>
+  <div class="form-group">
+<input class="form-control" type="text" name="FirstName" id="" placeholder="Enter Firstname" required="">
+<small class="invalid-feedback">Please enter your Firstname</small>
+<!-- <div class="invalid-tooltip">V1</div> -->
+</div>
+<div  class="form-group">
+<input class="form-control"  type="password" name="Pwd" placeholder="Enter Password" id="" required="">
+<small class="invalid-feedback">Please enter your password</small>
+</div>
+<div  class="form-group">
+<input class="btn btn-primary" type="submit" value="Login">
+</div>
+
+</form>
+</div>
+</div>
+<script>
+
+var a1=document.querySelector('.needs-validation');
+// console.log(a1);
+a1.addEventListener('submit',function(e){
+
+  // console.log(a1.checkValidity());
+  if(a1.checkValidity()===false){
+      e.preventDefault();
+      e.stopPropagation();
+  }
+  a1.classList.add('was-validated');
+})
+</script>
+</body>
+</html>
